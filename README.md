@@ -1,0 +1,2 @@
+# Practice_for_TypeScript
+TypeScript练习库
