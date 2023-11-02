@@ -19,7 +19,7 @@
     //  Argument for '--target' option must be: 'es3', 'es5', 'es6', 'es2015', 'es2016', 'es2017', 'es2018', 'es2019', 'es2020', 'es2021', 'es2022', 'esnext'.
     "target": "esnext",
     // 指定要使用的模块化的规范 ES2022、CommonJS...
-    // Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodenext'.
+    // Argument for '--module' option must be: 'none', 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', 'es2022', 'esnext', 'node16', 'nodeNext'.
     "module": "amd",
     // lib 用来指定项目中要使用的库,一般不修改，注释掉，
     // "lib": []
@@ -41,6 +41,8 @@
     // 默认不执行严格
     // 当你的代码中含有import export 导入导出时，此属性自动打开，也不会再出现"use strict"字样
     "alwaysStrict": true,
+    //  所有严格检查的总开关 noImplicitAny\ noImplicitThis\ strictNullChecks
+    "strict": false,
     // Any 类型
     // 非主动 使用any 即隐式any TS并不会出现任何报错，此时noImplicitAny 为 true 即不允许有任何的隐式any
     "noImplicitAny": true,
