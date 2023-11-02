@@ -1,2 +1,2 @@
-console.log('week')
-let a = 10
+// console.log('week')
+// let a = 10
