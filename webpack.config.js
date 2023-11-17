@@ -18,6 +18,7 @@ module.exports = {
     // 告诉webpack 不使用箭头函数
     environment: {
       arrowFunction: false,
+      const: false,
     },
   },
   // webpack 打包时使用的模块
@@ -65,6 +66,29 @@ module.exports = {
         ],
         // 要排除的文件
         exclude: /node-modules/,
+      },
+      // 设置less文件处理
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          // 引入postcss
+          // 将新的css转化成久的css 适配旧版本的浏览器
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  // 预置环境
+                  // 兼容浏览器最新的两个版本
+                  ['postcss-preset-env', { browsers: 'last 2 versions' }],
+                ],
+              },
+            },
+          },
+          'less-loader',
+        ],
       },
     ],
   },
